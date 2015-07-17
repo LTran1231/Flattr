@@ -2,12 +2,10 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.3'
-
 gem 'rails-api'
-
 gem 'spring', :group => :development
 gem 'faker', '~> 1.4.3'
-
+gem 'rack-cors', :require => 'rack/cors'
 gem 'sqlite3'
 
 
