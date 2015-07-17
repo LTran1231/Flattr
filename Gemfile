@@ -7,6 +7,7 @@ gem 'spring', :group => :development
 gem 'faker', '~> 1.4.3'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'sqlite3'
+gem 'pg'
 
 
 
