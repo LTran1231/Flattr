@@ -8,8 +8,7 @@ gem 'rails-api'
 gem 'spring', :group => :development
 gem 'faker', '~> 1.4.3'
 
-gem 'sqlite3'
-
+gem 'pg'
 
 
 # To use ActiveModel has_secure_password
