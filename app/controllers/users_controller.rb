@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def index
     users = User.all
-    if user
+    if users
       render json: users
     else
       render json: { errors: users.errors.full_messages }
