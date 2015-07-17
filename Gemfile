@@ -6,7 +6,7 @@ gem 'rails', '4.2.3'
 gem 'rails-api'
 
 gem 'spring', :group => :development
-
+gem 'faker', '~> 1.4.3'
 
 gem 'sqlite3'
 
