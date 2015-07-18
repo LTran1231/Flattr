@@ -38,7 +38,12 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.2)
     builder (3.2.2)
+    byebug (5.0.0)
+      columnize (= 0.9.0)
+    columnize (0.9.0)
     erubis (2.7.0)
+    faker (1.4.3)
+      i18n (~> 0.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -52,7 +57,9 @@ GEM
     minitest (5.7.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    pg (0.18.2)
     rack (1.6.4)
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.3)
@@ -100,10 +107,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
+  faker (~> 1.4.3)
+  pg
+  rack-cors
   rails (= 4.2.3)
   rails-api
   spring
   sqlite3
 
 BUNDLED WITH
-   1.10.3
+   1.10.5

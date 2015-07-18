@@ -2,13 +2,12 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.3'
-
 gem 'rails-api'
-
 gem 'spring', :group => :development
-
-
+gem 'faker', '~> 1.4.3'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'sqlite3'
+gem 'pg'
 
 
 
@@ -26,3 +25,6 @@ gem 'sqlite3'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+group :development, :test do
+  gem 'byebug'
+end

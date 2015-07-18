@@ -1,11 +1,31 @@
 class UsersController < ApplicationController
+  def facebook
+    user = params[:user]
+    provider = "facebook"
+    @user = User.create_from_provider(user, provider)
+    session[:user_id] = @user.id
+    render json: current_user
+  end
+
+  def google
+    user = params[:user]
+    provider = "google"
+    @user = User.create_from_provider(user, provider)
+    session[:user_id] = @user.id
+    render json: current_user
+  end
 
   def index
-
+    users = User.all
+    if users
+      render json: users
+    else
+      render json: { errors: users.errors.full_messages }
+    end
   end
 
   def show
-    user = User.find(session[:user_id])
+    user = User.find(params[:id])
     if user
       render json: user
     else
