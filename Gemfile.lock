@@ -38,6 +38,9 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.2)
     builder (3.2.2)
+    byebug (5.0.0)
+      columnize (= 0.9.0)
+    columnize (0.9.0)
     erubis (2.7.0)
     faker (1.4.3)
       i18n (~> 0.5)
@@ -104,6 +107,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   faker (~> 1.4.3)
   pg
   rack-cors
@@ -111,3 +115,6 @@ DEPENDENCIES
   rails-api
   spring
   sqlite3
+
+BUNDLED WITH
+   1.10.5

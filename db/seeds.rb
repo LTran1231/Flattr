@@ -13,7 +13,7 @@
       last_name: Faker::Name.last_name,
       body_type: ['thin', 'medium', 'large'].sample,
       gender: ['male', 'female'].sample,
-      dob: Faker::Time.between(20000.days.ago, 10000.days.ago),
+      # dob: Faker::Time.between(20000.days.ago, 10000.days.ago),
       password: Faker::Internet.password,
       email: Faker::Internet.email)
 end

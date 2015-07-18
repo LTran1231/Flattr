@@ -1,4 +1,10 @@
 class UsersController < ApplicationController
+  def auth_login
+    user = params[:user]
+    @user = User.create_from_provider(user)
+    session[:user_id] = @user.id
+    render json: current_user
+  end
 
   def index
     users = User.all

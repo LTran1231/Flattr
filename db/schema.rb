@@ -29,9 +29,11 @@ ActiveRecord::Schema.define(version: 20150717031211) do
     t.string   "last_name"
     t.string   "body_type"
     t.string   "gender"
-    t.date     "dob"
+    t.integer  "age"
     t.string   "password"
     t.string   "email"
+    t.string   "uid"
+    t.string   "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
