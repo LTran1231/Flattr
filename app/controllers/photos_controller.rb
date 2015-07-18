@@ -15,9 +15,9 @@ class PhotosController < ApplicationController
     vote = Vote.where(photo_id: params[:id])
     vote_count = vote.count
     like_votes = vote.where(:like => true).count
-    rating = (like_votes.to_f / vote_count.to_f) * 100  
+    rating = (like_votes.to_f / vote_count.to_f) * 100
     if photo
-      
+
       render :json => {
         :photo => photo,
         :vote_count => vote_count,
@@ -25,7 +25,7 @@ class PhotosController < ApplicationController
         :like_votes => like_votes,
         :rating => rating
       }
-      
+
     else
       render json: { errors: photo.errors.full_messages }
     end
@@ -73,6 +73,6 @@ class PhotosController < ApplicationController
 
   private
     def photo_params
-      params.require(:photo).permit(:title, :text)
+      params.require(:photo).permit(:user_id, :vote_count, :photo_url)
     end
 end
