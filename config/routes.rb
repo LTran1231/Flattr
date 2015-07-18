@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  post 'auth_login' => 'users#auth_login'
+  post 'facebook' => 'users#facebook'
+  post 'google' => 'users#google'
 
   resources :users
   resources :photos

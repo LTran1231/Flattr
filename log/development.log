@@ -10295,3 +10295,1094 @@ ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
   Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
   Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
   Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-07-17 22:23:36 -0700
+
+SyntaxError (/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/controllers/users_controller.rb:19: syntax error, unexpected ')', expecting ']'):
+  app/controllers/users_controller.rb:19: syntax error, unexpected ')', expecting ']'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/users/1" for ::1 at 2015-07-17 22:23:46 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 153ms (Views: 1.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2015-07-17 22:24:47 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ApplicationController):
+  vendor/bundle/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:132:in `process'
+  vendor/bundle/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+  vendor/bundle/gems/rack-cors-0.4.0/lib/rack/cors.rb:80:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+
+
+Started GET "/" for ::1 at 2015-07-17 22:25:24 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ApplicationController):
+  vendor/bundle/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:132:in `process'
+  vendor/bundle/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+  vendor/bundle/gems/rack-cors-0.4.0/lib/rack/cors.rb:80:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-17 22:52:48 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ApplicationController):
+  vendor/bundle/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:132:in `process'
+  vendor/bundle/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+  vendor/bundle/gems/rack-cors-0.4.0/lib/rack/cors.rb:80:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (2.1ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-17 23:00:00 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBALdLBKUJDfR6gD02qWWORFoWZAwVyTa2Jhl5cHO7ve0ebAJhzaPaZAJqvm6ZB0SvZCgdtFkkTwiZCC5oRvlI6TUWq5M3gIJd3sEwWTcZBnZCWy6MjC0c7K2WLt1izwOL6dn3fixjvZAtgGW7WUz3C9wnkxD4CgJB8W34cDf1wL7d62yMpYVCdIQE9CgSgAR1oWqLFZADPQPzB", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcxOTkyMDB9.gmb8QkirfiiQdPAZv01bGoTXpv2mplKJuUUbivWg-X4", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499407200"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "first_name", "last_name", "age", "gender", "avatar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["uid", "facebook:10206973757603562"], ["first_name", "Le"], ["last_name", "Tran"], ["age", 21], ["gender", "female"], ["avatar", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"], ["created_at", "2015-07-18 06:00:01.236298"], ["updated_at", "2015-07-18 06:00:01.236298"]]
+  [1m[36m (13.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 244ms (Views: 1.6ms | ActiveRecord: 29.7ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-17 23:00:01 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-17 23:01:23 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBABInDy9FgEaYgZAlpH807tfkEfcFjRgsweASeDnJZC9yUlqwC7maiM3b32Xy1p2IoHAKyRfENaYDqu9wqMhJ5FVyqdbPjoL3JRSVZCumqZCbwz8voqIA06jMBPel1fnwubFs31HRwk9NOqdiRfR6NDlxZC9WhV2ElD3lTmab6ZBXw0TTJPJM5dkjmYmFyd7LX9yV4CPFav", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcxOTkyODN9.ITYq2Wj1Z7KokaA553tTt_4Uovd5ydshAAAllKFV9nc", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499407283"}}
+  [1m[35mUser Load (5.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-17 23:01:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-17 23:01:49 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-17 23:03:11 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAOBNPAQQpxRkzBENqYuhfCcUxJqfflH7ai6HWa40I8QiTPMTqpLKHHjMyUJmPDn0LgRsr4wccoeXaIKyxFg8xURIsFnN4nKrzw3OJUCUYLfv59ltqo1oCVOCadilLn6CcZBVwmv6xjJG1TCOZCHzIZCo44ypZA6guTPtMxKpNTsxDjOFPSTFdWXisQEr3NvWarov7VZCh", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcxOTkzOTF9.L17vRLm5F9_3Aa7_AbnCA6SlajA8XBE8aJmdpV86WWA", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499407391"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-17 23:03:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-17 23:04:07 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10204594617920566", "provider"=>"facebook", "facebook"=>{"id"=>"10204594617920566", "accessToken"=>"CAAN1YfX79icBALwZBF9pHYwvDN3v3oiNjWFRBKqFTZCjD16jFgg9MibagD6c7sAZCGUUFZAZBv8DZAFul2ULYLluG1BpIgkJGRZAzWeZBBIrfbyAznYVcbs057gF3wmNhT7zWMRcymOjHAGC80p4GhYEPjm1ERYRNimqcrzgFupBYYo6pC8ZBZBw1nd1nDoCPhByXIsnrP9VbpyU3vEadjsQI5", "displayName"=>"Carissa Blossom", "cachedUserProfile"=>{"id"=>"10204594617920566", "name"=>"Carissa Blossom", "last_name"=>"Blossom", "first_name"=>"Carissa", "gender"=>"female", "link"=>"https://www.facebook.com/app_scoped_user_id/10204594617920566/", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11054513_10204181888202581_6296037288109037098_n.jpg?oh=852f86de18a4d699b69c59bd6ddad860&oe=564E464B&__gda__=1444612499_b789daa94f842e792e3c9bf9496159b4"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11054513_10204181888202581_6296037288109037098_n.jpg?oh=852f86de18a4d699b69c59bd6ddad860&oe=564E464B&__gda__=1444612499_b789daa94f842e792e3c9bf9496159b4"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA0NTk0NjE3OTIwNTY2IiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcxOTk0NDZ9.qfG_PJGizMvDH4xyBoQHZ4yJBdOz47Is1F_sTbcnHgc", "auth"=>{"uid"=>"facebook:10204594617920566", "provider"=>"facebook"}, "expires"=>"1499407446"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "facebook:10204594617920566"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.7ms)[0m  [1mINSERT INTO "users" ("uid", "first_name", "last_name", "age", "gender", "avatar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["uid", "facebook:10204594617920566"], ["first_name", "Carissa"], ["last_name", "Blossom"], ["age", 21], ["gender", "female"], ["avatar", "https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11054513_10204181888202581_6296037288109037098_n.jpg?oh=852f86de18a4d699b69c59bd6ddad860&oe=564E464B&__gda__=1444612499_b789daa94f842e792e3c9bf9496159b4"], ["created_at", "2015-07-18 06:04:07.384378"], ["updated_at", "2015-07-18 06:04:07.384378"]]
+  [1m[35m (6.7ms)[0m  COMMIT
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 43ms (Views: 6.1ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/users/3" for ::1 at 2015-07-17 23:04:07 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 3]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-17 23:05:06 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBABcwg79nBphw0xwN8AZABZC4QHFEN8ZBI2KqqQIDXXicBDjVPNQ25m3i9LXmMVdRabRbPIyPnl8E9xr7JovyusgcRRDnnGmimltYGXOUfZC5YIgEjnYrJ5GaZB7wMtkeWJ9ol6YDMaL6ISNoifpFWceAjVXjOjW1BKQhovMgttTI9ORFDwue5YGtj0LrDHrjZBM6FbzvNl", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcxOTk1MDV9.CZ3St41-8-RMvnymP6lza79cJvJuh_qe8_FmUrSXaxA", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499407505"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "facebook:10206973757603562"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-17 23:05:06 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-17 23:06:43 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAAcCx0ZARTpzkrZBilAF0Nscef7jPTxyjTl2YYjGRs8QntDGR48691BKWTsnpDhh5cl0aBr44XTrVUeNUiZBRHJWeQ1ZCMNXW0OXOOthQ7E1OvzU7d5mPuF2C7ov951XBqS3pBZA7ABQyVVOTZAXxPfZA80pEa1qTqFi5YqaF0ZC6i5i6t4V6JUC4vUeMBWKZCasFGEVSS7JX", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcxOTk2MDN9.WEWeC5i52_UMV6ENc9s0Banj5jd4PYFmLcLYanallN0", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499407603"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-17 23:06:44 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-17 23:40:32 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAD5FlZB1khlWtMeXlmMwdfUVfCI7DsxqhwKl4INrshEPrXbgaZBp4NTez1069eEUpyEpbPyAz5K6SJS162wgKDSYqgtHfQdOfm7z075ctiMLZA0tLvm7b41i8r9BRlh6vSjaTF5ixtv8pj8De24gDR22BFZAjSZBwJafratcpDKeGawt9VlNZC4bkBZAneybDmrhevoYZCKW", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMDE2MzF9.s1NzqHgD_-K2pbIGTztsbFz2nAWGbdK71toopHJvpdU", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499409631"}}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "facebook:10206973757603562"]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 34ms (Views: 5.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-17 23:40:32 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-18 08:20:18 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBANdrsaTckUN4oJtpHO6eO4HRtbsPwiUaMY8N8XIA7KdYzCmCVEYdrTmbEgKJcODl2tQsZAWPFA8vKdaOvfdd5k4xZBc8YAol9KQwN658RukarlXI3a9bXPHyZCv1pSOP8xpgureBPSyM6QqSZCK7vMDs6iKttSIuwGps5AKinvJGbE4ET4ZBiR31oeCAlm8jz8O4dm4XG", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzI4MTd9.HyrH4oUIiEGtt2HwjrsOJZSPnTUKm6EaiLMU_GMdJPc", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499440817"}}
+  [1m[35mUser Load (23.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 61ms (Views: 9.3ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-18 08:20:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/auth_login" for ::1 at 2015-07-18 08:32:41 -0700
+Processing by UsersController#auth_login as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAFton4gBY4z2nFhIxTcBeBjitAgcs-jTnlj2vnOh0ecuDIyesUbjCrCLEZDXgzYYs0G", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzM1NjB9.KKFHFI75LnS6jicFM0uvrW6L3Nmp7TXqbIM1MMbvPdA", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499441560"}}
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/models/user.rb:17:in `create_from_provider'
+  app/controllers/users_controller.rb:4:in `auth_login'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.7ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 08:36:23 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAKXZC0rejtNsXaeQfu0IZAHe1zVpV54YCt2If1qxnt7iWmhEL2VZBX5w9mnHt7X7IKQSx4kvOjmgNvXwB6I99KinplpthMEmlFZADzRADClid7FmdaCaGAeFjMjyVSrhZCvpMQ28ZBUpfavFMoDCIcxYRZCQz69oRq7ED1ja1uL3xSlc949eOJ0ue1HZADFfTavMLT9vaVbf", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzM3ODF9.RLs8ebDmmZjKuORqjqDCUtolAABrc2tQXElCYbPGhTU", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499441781"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "facebook:10206973757603562"]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 100ms (Views: 1.8ms | ActiveRecord: 72.8ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-18 08:36:23 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 08:36:35 -0700
+
+ActionController::RoutingError (No route matches [POST] "/google"):
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+  vendor/bundle/gems/rack-cors-0.4.0/lib/rack/cors.rb:80:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (58.2ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 08:37:27 -0700
+
+ActionController::RoutingError (No route matches [POST] "/google"):
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+  vendor/bundle/gems/rack-cors-0.4.0/lib/rack/cors.rb:80:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.6ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 08:37:53 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAFg8yXP-sJ5MfJRf9-3AnxDpBmOrEj-wXBby2US3F6pjOIf_MvsWG3Asu2XGUE8Q8UF", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzM4NzJ9.tLtDRpdCCNShKXh-rdjxMv7co-nSpdntIcoJOtIjNoI", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499441872"}}
+Completed 500 Internal Server Error in 158453ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:12:in `exit'
+  app/controllers/users_controller.rb:12:in `google'
+  app/controllers/users_controller.rb:12:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (274.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (79.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (392.7ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 08:40:33 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBADfZC4DwQAsgvE1XlZAILR5dK8qblqJWQFBD3Jh8rO5vAgmcez2uZBhA0m3EiBDqcaiSWZCBWi2N5RwhtEvdDCOjnUudhnU4nMZCk5E54tNzQlj1S06lRLOV4ZBVdZBIssC1gPd6sI7gWAaUhHSqqPuJ3SIJ3dVsZC6vdhyMG427SaEzeII8oEO1WFTcjwtMw0TGA007EtGD", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzQwMjZ9.oEZt-2bl4a_GVg5eeSMgNduYmo0_IT2tWV3VLYmSVlo", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499442026"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/models/user.rb:15:in `create_from_provider'
+  app/controllers/users_controller.rb:5:in `facebook'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (174.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (225.7ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 08:41:08 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAOrcLxdOnXVZA40x1IRSeAhsE3iGNUSYIEdZBA8gDld53uXDWnXbe4ZCZAMZBZADZBj7KX5zwEgomp3udZB5Yit0AKOfk7JZBGlUgJpSkFiwo05SxDpRXYcgIimyCDjwdXruq5Rblgd94898ej8E93Am3GMyJ4jzJYweUC1IYe0o0Ya5PdZArfRDoKzSVTz424LTFkBPUoW9ih", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzQwNjZ9.Up2Yl-4_ox1fINBZlKIzJxRW0zqQCsRd3X1T8CF69iU", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499442066"}}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 138ms (Views: 6.6ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-18 08:41:08 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 60ms (Views: 8.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 08:41:43 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAGItTgZqQyLklQpuI4xnbyFi1DAKWcvc3nL2vO614J-sPmPzo2hQ57-B5RTHu646ZZf", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzQxMDJ9.jrafGOBl5Xh-9JhaPdfHO9LfPMS0eHrGIA8ekdV_9UY", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499442102"}}
+Completed 500 Internal Server Error in 1134760ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:14:in `exit'
+  app/controllers/users_controller.rb:14:in `google'
+  app/controllers/users_controller.rb:14:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (266.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (75.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (378.7ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:00:40 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAMAgMXiKhXiGLB9XfiH938Gn1X69Gv5IL6ljH1rt2rtZCMGj8pfTu9mEB1K0aDV5G3BTRhFJJDVQnmRwhp5ZCsVIfPz26lCaeDepMvtQGh17mhjIZAjMTZCHm6ETZBZAMj95AI2iNqZABEmH3GT7436ZA9Qmr1ysHA2JJLIc9U7X01YtjlEWOXUqACKZCKNCNC7R1zK9mDVTR", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzUyMzB9.HGKny-l9kMVSPHtmp8Ub8WkoEfwn_aGDrhSToypI7jQ", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499443230"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :age, allow_blank: true,
+             ^
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:6: Can't assign to true
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :first_name, allow_blank: true,
+             ^
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:7: Can't assign to true
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :gender, allow_blank: true,
+             ^
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:8: Can't assign to true
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:9: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :last_name, allow_blank: true,
+             ^
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:9: Can't assign to true
+/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:48: syntax error, unexpected '\n', expecting :: or '[' or '.'):
+  app/models/user.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/user.rb:6: Can't assign to true
+  app/models/user.rb:7: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/user.rb:7: Can't assign to true
+  app/models/user.rb:8: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/user.rb:8: Can't assign to true
+  app/models/user.rb:9: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  app/models/user.rb:9: Can't assign to true
+  app/models/user.rb:48: syntax error, unexpected '\n', expecting :: or '[' or '.'
+  app/controllers/users_controller.rb:5:in `facebook'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (214.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (70.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (316.1ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:01:36 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAFuhsIvarZCi3HLrrsgpe1BNVNr09KaU2HoFWoboDReSdnm5mL41sQTJj3gVZAVV89Fbe8zhpgZAPpNW2PBZBXGFBv1hRj1ei8AWX104N4OdxDoz11hV4nGMgoQ0MShBj3uQiUtDDGYHOov1GPekJHlgkV5sZAt7dnA8Qx7whtYxUYsVPNVbfh4MykiQegZBYMBXC6LwTc", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzUyOTV9.MNZSigVDoqusBjxpdcp3bhUJU0WXlWdPNu-BiZcoqh8", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499443295"}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ArgumentError (You need to supply at least one validation):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `facebook'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (206.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (30.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (313.3ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:02:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (18.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAAZC651N9L3ZC5k9lZB6ZBxTisBfUr6s0KE1kKfguVdmuvQPW46Rvs9WZAQZAXXY7oDFg64J4ZBkngzekzytJNFt0VFMvBmedoRWNrZB2YeOZCkfyQLQHWsFxXSiAEhN2vaISW2xwA1dXgoJ92zWfG6vfdxoXmZC4eTR56K58N5mrH72ZAr74oHaipKelHpsMuiRq3BqrACV9Cs", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzUzNTh9.D1_G8iz-tCAkTFBaYtxLiFiOIZs-WxptHJAbo6VGZzg", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499443358"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ArgumentError (You need to supply at least one validation):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `facebook'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (49.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.4ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:05:24 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAAVf8wILqcTA9R5gWxo1cciZADFIZBr0511qsGEW0iU7ipGVe93ZB5fTQS8Au5CWMiLyQCVQVNrMkMBLZADx7xZAwLMf1pOl7SFnKgDWtVTyH2sMSU5bpTGhOJnTzvbAfrOisl18dYU1c6hOZCDVJUhLShWdvFONV8DGm1VLAWRyIRZApFZAhdkvZB5FTdtxHL9D7JXyWjX4V", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzU1MjN9.4XL9hTgrzVG8bctcxsK7HWfLN7hdLoW26pLI_Y2BMCc", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499443523"}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ArgumentError (Unknown key: :allow_blank. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `facebook'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (38.8ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:11:40 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAN8XL0NFTwOzPvtAh643EeGtETxdiuglJaTiOyYYrq3jAWEXpZALYBXziQa8sRrp0ssi0WpeVCsQIcEO2jHU4KNUZBvcq62c1ZBcWsW76pZBMQPcr1KYvONU3htQdMCr1eOqeUgjN65NlU2KjzjzZC1RnzYUwdX1sCNiywOeQKFL1XYSyZAUICM1qABJ01YZCjhGINZBDNZAR", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzU4OTl9.UImfXsDYFjWU44IfnpcGHeiFdYqPeUvOsliKdUxRftI", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499443899"}}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+ArgumentError (You need to supply at least one validation):
+  app/models/user.rb:5:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:5:in `facebook'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.9ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:12:43 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAGoTjiPCT0OidiY5WIWgchh5Nl2OlqlRZAn8w5ZCG1mz7ZBA6v9KAwfMdZBn5CKttDdCX6wWtz7ZCIWQ7DOC9emGz3eIgZBc2TacdHAMgXcHshvaSk385WjQj0fy4f9rmSEwqSaKJdmzZBxyFQpXOm5Ub84sG9xsgdNlmhIdJPyQBH2iBM9I2WFau6qBD8TzZAbZCn1OPnrPu", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzU5NjJ9.fGJqT2CL0Z1VSr2qVSVhHIisRyZxMwkfiHFPj14npVE", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499443962"}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of Symbol into Integer):
+  app/models/user.rb:17:in `[]'
+  app/models/user.rb:17:in `create_from_provider'
+  app/controllers/users_controller.rb:5:in `facebook'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (98.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.1ms)
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:13:45 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAHUH9Nw3WRbIq72q4TSIPlZAZAmEnOM5RjZCeAF67mZBIlJvvUALoDAegvvL99P3odFj9BMXKB3ANnBGp5RBFoROiIH6I0OFZA4VdMnxky977qE0igMJCsc1n39U3doe4YDw20hEBqB3i6EjHRpsyXPZAz0RbW29ZBywVZBZCjUhEiImbisMZC5CHtSb4fGx0xvVrQVpQi1eyE", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzYwMjR9.YCrGDj83Cw3X7eef9_4nfZBLkDfC-c9ovuIPkyFWlJg", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499444024"}}
+  [1m[35mUser Load (6.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 139ms (Views: 1.6ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-18 09:13:45 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:14:11 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAHmWt8Ul9-5rHTk4qX_K-y2gFSw0sgFCWgSRUUYa8-DBlY3dkOjLSowP2fk4IFt1gDY", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzYwNTB9.hRjOnQlJGC5vtcDKHPIlSLYjcUK84e_QrBxPVe_4LHY", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444050"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (1 for 2)):
+  app/models/user.rb:12:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:14:36 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAHZP2Luu2aijmN4bhFulibqPaqJEbjONpnZT5SHROXnXTkijeA2DwSJnsNF-jcFakNJ", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzYwNzV9.h63fTymc-t982IT4PdgA-7IsAYYqwOO4CUadIpGC5QY", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444075"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+  [1m[35m (7.1ms)[0m  BEGIN
+  [1m[36mSQL (28.7ms)[0m  [1mINSERT INTO "users" ("uid", "first_name", "last_name", "gender", "avatar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "google:101699967333588757947"], ["first_name", "Le"], ["last_name", "Tran"], ["gender", "female"], ["avatar", "{\"id\"=>\"101699967333588757947\", \"name\"=>\"Le Tran\", \"given_name\"=>\"Le\", \"family_name\"=>\"Tran\", \"link\"=>\"https://plus.google.com/101699967333588757947\", \"picture\"=>\"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg\", \"gender\"=>\"female\", \"locale\"=>\"en\"}[:picture]"], ["created_at", "2015-07-18 16:14:37.221607"], ["updated_at", "2015-07-18 16:14:37.221607"]]
+  [1m[35m (27.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 297ms (Views: 1.6ms | ActiveRecord: 68.7ms)
+
+
+Started GET "/users/4" for ::1 at 2015-07-18 09:14:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:15:45 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAEc6Krk8cy0UEkx18jIYbmW568kPn0_ozeWg0n4FaTdqF5e6fV9ew6v6z5v7BMG5HQM", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzYxNDN9.XXkZW0aMXPx9D5k0L4q9-pRbPwRuXHslRqlB3xk01aA", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444143"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 31ms (Views: 0.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/4" for ::1 at 2015-07-18 09:15:45 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:16:39 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAH2NPWDvLcoYcE63YM7sMLhJ5y7-2TJZab__FY-2gcVuORg8Vai9tnNt8qM4VnOojiI", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzYxOTh9.Z29LEFgaWwFtDhKYwgoNR0yT5Ip37QU3V3UbdiMas-4", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444198"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "google:101699967333588757947"]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 41ms (Views: 1.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/users/4" for ::1 at 2015-07-18 09:16:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for ::1 at 2015-07-18 09:16:58 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 21ms (Views: 0.8ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:17:05 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAEeMw7XOzkBJfOGV4vmX_-dYYFNygblT_IPu6ba1hH0nVxF66U9eI2jbUO3MczgXh-3", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzYyMjR9.Ogir6Raj0xJpLSpUIV_Yi0MpOFhUSCsUhbuECvRuq_Q", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444224"}}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.2ms)
+
+NoMethodError (undefined method `udpate' for #<User:0x007fb1012dad70>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (6.7ms)[0m  [1mUPDATE "users" SET "avatar" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["avatar", "avatar"], ["updated_at", "2015-07-18 16:18:22.914978"], ["id", 4]]
+  [1m[35m (11.5ms)[0m  COMMIT
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:19:55 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAFnvu4bBYijyc6m3ahT1gvxDcEaT-TUpGDbcLW2kGiuzb30MyxPsQmydvxEQsa11Ekv", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzYzOTR9.CdDFcil3uixN0yTmlJtBRcxv2UpTj-L_wBao00veL8I", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444394"}}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 4.9ms)
+
+NoMethodError (undefined method `udpate' for #<User:0x007fb106201250>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (160.2ms)
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "users" SET "username" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["username", "Le"], ["updated_at", "2015-07-18 16:20:36.207699"], ["id", 4]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2015-07-18 09:21:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ApplicationController):
+  vendor/bundle/gems/actionpack-4.2.3/lib/abstract_controller/base.rb:132:in `process'
+  vendor/bundle/gems/actionview-4.2.3/lib/action_view/rendering.rb:30:in `process'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:196:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_controller/metal.rb:237:in `block in action'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `each'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/journey/router.rb:30:in `serve'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/routing/route_set.rb:821:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/etag.rb:24:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/conditionalget.rb:25:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/head.rb:13:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/query_cache.rb:36:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  vendor/bundle/gems/activerecord-4.2.3/lib/active_record/migration.rb:377:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/callbacks.rb:84:in `run_callbacks'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:38:in `call_app'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `block in call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:26:in `tagged'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/tagged_logging.rb:68:in `tagged'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/rack/logger.rb:20:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/runtime.rb:18:in `call'
+  vendor/bundle/gems/activesupport-4.2.3/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/static.rb:116:in `call'
+  vendor/bundle/gems/rack-cors-0.4.0/lib/rack/cors.rb:80:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/engine.rb:518:in `call'
+  vendor/bundle/gems/railties-4.2.3/lib/rails/application.rb:165:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/lock.rb:17:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/content_length.rb:15:in `call'
+  vendor/bundle/gems/rack-1.6.4/lib/rack/handler/webrick.rb:88:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/LTran/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (2.3ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:21:43 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAGoKAafb04ORRgeyHDFi55KbzR5IKcLR9-QKjH1-grEvDsvNonTHCN5QyRXAxQmX113", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY1MDJ9.Dp1m963pV5yZOiukPZmCh85uwHjLEq2Hx1UwPVz5xhA", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444502"}}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 4.7ms)
+
+NoMethodError (undefined method `udpate' for #<User:0x007fcd9b210258>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.7ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:22:36 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAEV8K5vhN-w1IWvGDehCmBN9w6bOztU8sMlTuCxROpF5L7mPq4M0ZIPdZtxtoZsvRs5", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY1NTR9.FZhs4TdJjwqaOgMrUcSGPHxv2x_1S_t2t9TZJ0KxoMY", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444554"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 4.7ms)
+
+NoMethodError (undefined method `udpate' for #<User:0x007fcd9b2dabc0>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.9ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:24:16 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAGo54sXj9gsTbUgKdMbbLj5wY6aB-gt1iERn3TeFJjM_YZFl3ucPguS-zIBw5EiIi26", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY2NTV9.0kA-XauE2VX-h7Yl7jIWA0Aiz86YfsJMDV25HFtvMgQ", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444655"}}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 4.4ms)
+
+NoMethodError (undefined method `first' for #<User:0x007fcd99ccc838>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.6ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:24:55 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAFAn7Uvwkr_UMVBx3bLDhRzBoVE6Za-aLClm6V56vzIno2E1GH2x6BZ3qpb9J7av9OJ", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY2OTR9.wHTDsRjX_AI6AZnJQT2SxGF4Zk3L5bIRc7VVta7EAlw", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444694"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 6.6ms)
+
+NoMethodError (undefined method `udpate_attributes' for #<User:0x007fcd9b5730f8>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:28:23 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAExFUax_Mie1U0YZLR1H4bCoZ0724mi-mLhbpODUoV3eaQmq-z9Zhwx12uh8eSiJa49", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY5MDJ9.LyrTnSHOpqBnX8K4wc9BUrNRtP5zDiCNvRPl0XmaY6k", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444902"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 4.4ms)
+
+NoMethodError (undefined method `udpate_attributes' for #<User:0x007fcd99f7c678>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.1ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:28:58 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAFGCY2HmigDc0TvtZXF61qdrPxhLttuudWGo9Wu0JTuiMdP94ai5Cb_uZnItdApZ64u", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY5Mzd9.6lQArhhK4WqULG7GG8pNnoAdB4w52brh3r4v5_FRuQQ", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444937"}}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 2.9ms)
+
+NoMethodError (undefined method `udpate!' for #<User:0x007fcd9a90b338>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.4ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:29:41 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAHVD5pVuuQxk9ZSe1mpBGUNeLZcbQ7yN0UF5kFGvsNYSl8bIMdfnUyhGb-Yc9CjGopl", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY5ODB9.kWmacdgey1koIE1A2Xy9dX-X7is-ECgJ-ZWaYbHxCSM", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444980"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.2ms)
+
+NameError (undefined local variable or method `params' for #<Class:0x007fcd9b4fb3c8>):
+  app/models/user.rb:31:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.8ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:29:58 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAFmkpp5lDUVXl6eWNDELikZLljwXXBmcacEUTmwsd_sZ7NuVaNBRu_u3zrEDeEGYpBh", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzY5OTd9.jztIYr_xfSTPJeXFFwAFBGQdQSs3VHBNIeeVxpzF-co", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499444997"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/LTran/DBC/Porforlio/Flattr/API-Flattr/app/models/user.rb:31: syntax error, unexpected ':'
+        self.first_name: first_name,
+                        ^):
+  app/models/user.rb:31: syntax error, unexpected ':'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:30:13 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAG3igYzq_xuhP6jk3jeVUvLWKRKi0VST015wZh-MF2Bj56fz_h79tLeMa7_-c6L-N2v", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzcwMTJ9.ToQQOTMdfQmipOnvHqt0mZ8jvj4Jy6DJL3Znc359Kxc", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445012"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.1ms)
+
+NoMethodError (undefined method `first_name=' for #<Class:0x007fcd997b9b20>):
+  app/models/user.rb:31:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:30:42 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAHY0MaQWm-rrXZoTDbrlYt_zSxkVefnGRphNXv0dwgBbCQy0wnf2uH8KheI3vjEfdfO", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzcwNDF9.sp2wS-GOirJY8juAmBhZ_mwBYa7QJhMGHkimXbIYUsQ", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445041"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "google:101699967333588757947"]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 4.4ms)
+
+NoMethodError (undefined method `udpate!' for #<Class:0x007fcd9b4f0dd8>):
+  app/models/user.rb:30:in `create_from_provider'
+  app/controllers/users_controller.rb:13:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.3ms)
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mSQL (8.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:32:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAGyCN5tEIc13CfbRLssIwhNYPZMH0lxA-rPQ1Nb2Hxp7Ea1ObNLhzZc-3LVEk2zvfl_", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzcxMzd9.CIhUSxaYDaL06wZjKjqjE5WmulMpzURR9rpHjlfgHbY", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445137"}}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "google:101699967333588757947"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "users" ("uid", "first_name", "last_name", "gender", "avatar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["uid", "google:101699967333588757947"], ["first_name", "Le"], ["last_name", "Tran"], ["gender", "female"], ["avatar", "{\"id\"=>\"101699967333588757947\", \"name\"=>\"Le Tran\", \"given_name\"=>\"Le\", \"family_name\"=>\"Tran\", \"link\"=>\"https://plus.google.com/101699967333588757947\", \"picture\"=>\"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg\", \"gender\"=>\"female\", \"locale\"=>\"en\"}picture"], ["created_at", "2015-07-18 16:32:19.516431"], ["updated_at", "2015-07-18 16:32:19.516431"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 200 OK in 66ms (Views: 2.4ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/users/5" for ::1 at 2015-07-18 09:32:19 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1
+  [1m[36mSQL (12.9ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+
+
+Started POST "/facebook" for ::1 at 2015-07-18 09:34:33 -0700
+Processing by UsersController#facebook as */*
+  Parameters: {"user"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook", "facebook"=>{"id"=>"10206973757603562", "accessToken"=>"CAAN1YfX79icBAPXozjBLYgIfqn0oMKeNkcZATjLfZAayqqtgRmrdDR79EJWjOqISk8XAOJoe5Nry9DWB6g3NhvPisRUuHaDIcfZAyAJX0J3kbCycBpTRbdzQlyJmlQCFc5oHjHLNh0ktyok6j05ET1JtGw1GnytjCCtDgolZCIlPZCQZB3cENe0JDZCHX85yhKcaiAJJu54PuaBnLOp9R5q", "displayName"=>"Le Tran", "email"=>"tle_tran@yahoo.com", "cachedUserProfile"=>{"id"=>"10206973757603562", "name"=>"Le Tran", "last_name"=>"Tran", "first_name"=>"Le", "gender"=>"female", "birthday"=>"12/31/1990", "link"=>"https://www.facebook.com/app_scoped_user_id/10206973757603562/", "email"=>"tle_tran@yahoo.com", "picture"=>{"data"=>{"is_silhouette"=>"false", "url"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}}, "age_range"=>{"min"=>"21"}, "locale"=>"en_US", "timezone"=>"-7"}, "profileImageURL"=>"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtf1/v/t1.0-1/p100x100/11014814_10206064482432251_4623366158647941657_n.jpg?oh=664b5f83f845ea5b94aaae29a2e1f0ce&oe=5650A199&__gda__=1444472335_b3c9ed1c8b6008a76294637baaf7cf4d"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6ImZhY2Vib29rOjEwMjA2OTczNzU3NjAzNTYyIiwicHJvdmlkZXIiOiJmYWNlYm9vayJ9LCJpYXQiOjE0MzcyMzcyNzJ9.LvGQsYdPCLypkSXXsGMhjIsCwmqE5NjpTU0bc67NQpE", "auth"=>{"uid"=>"facebook:10206973757603562", "provider"=>"facebook"}, "expires"=>"1499445272"}}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "facebook:10206973757603562"]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 33ms (Views: 1.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/2" for ::1 at 2015-07-18 09:34:33 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:34:37 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAESIJ0nff4TV3yVSfVVpTxKWgmnqsk_HZzNewLvkiarurWSruCXH9FIppA3nTFUIs4m", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzcyNzZ9.LSHkds2xz4FH3x-oAyTPbZQFihmxXsmX9waJe3KiDzU", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445276"}}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("uid", "first_name", "last_name", "gender", "avatar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["uid", "google:101699967333588757947"], ["first_name", "Le"], ["last_name", "Tran"], ["gender", "female"], ["avatar", "{\"id\"=>\"101699967333588757947\", \"name\"=>\"Le Tran\", \"given_name\"=>\"Le\", \"family_name\"=>\"Tran\", \"link\"=>\"https://plus.google.com/101699967333588757947\", \"picture\"=>\"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg\", \"gender\"=>\"female\", \"locale\"=>\"en\"}[:picture]"], ["created_at", "2015-07-18 16:34:37.776973"], ["updated_at", "2015-07-18 16:34:37.776973"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/6" for ::1 at 2015-07-18 09:34:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:35:24 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAFZJyqWmHG0_VnRNJevEkyvG-raCyObUFoWZjX1X4weah2IHYjOPkDgezKi-GjBogMS", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzczMjN9.fK7-z_Surb823-rMjjjnERj3H3bhg2w1p4hV5w9p0O4", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445323"}}
+Completed 500 Internal Server Error in 194229ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:14:in `exit'
+  app/controllers/users_controller.rb:14:in `google'
+  app/controllers/users_controller.rb:14:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (244.8ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (75.9ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (367.6ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:38:40 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAF3gWc3ro8r602XV6h2lfU94-0f9bjd5ynDuHvE78MfjenOzX4JqwmYn3BMmJa26exz", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzc1MTB9.DgqvjFRgxDRgxpiLYZHUgs9PoncV4YxDEjrHV86ZPWY", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445510"}}
+Completed 500 Internal Server Error in 21921ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/users_controller.rb:14:in `exit'
+  app/controllers/users_controller.rb:14:in `google'
+  app/controllers/users_controller.rb:14:in `google'
+
+
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (266.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (34.3ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered vendor/bundle/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (381.0ms)
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:39:04 -0700
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAEgbUk-sSPU-nMSzPTRBSfSpH3fzZZA-ejCSc_9sLJGG1nWz_gxySIcwHPo4VqR1SeS", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzc1Mzd9.-Li4-seeLOR2lMutFSNIbiuvxP1erPXCfeW1-90kW1M", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445537"}}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1[0m  [["uid", "google:101699967333588757947"]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+Completed 200 OK in 141ms (Views: 4.9ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/users/6" for ::1 at 2015-07-18 09:39:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 0.7ms)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mSQL (13.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 6]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+
+
+Started POST "/google" for ::1 at 2015-07-18 09:40:49 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#google as */*
+  Parameters: {"user"=>{"uid"=>"google:101699967333588757947", "provider"=>"google", "google"=>{"id"=>"101699967333588757947", "accessToken"=>"ya29.tAHUq-HhcNAaG5tQNsS_8X1OpOyw0wrM7y33dqKpJjHw5iiANKQSppwWQb5bR6xVD40k", "displayName"=>"Le Tran", "cachedUserProfile"=>{"id"=>"101699967333588757947", "name"=>"Le Tran", "given_name"=>"Le", "family_name"=>"Tran", "link"=>"https://plus.google.com/101699967333588757947", "picture"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg", "gender"=>"female", "locale"=>"en"}, "profileImageURL"=>"https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"}, "token"=>"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJkIjp7InVpZCI6Imdvb2dsZToxMDE2OTk5NjczMzM1ODg3NTc5NDciLCJwcm92aWRlciI6Imdvb2dsZSJ9LCJpYXQiOjE0MzcyMzc2NDh9.5SxEAOWNGaM_7rV0zwHWnPwpIBTAeK8ABO4-D5LcXbY", "auth"=>{"uid"=>"google:101699967333588757947", "provider"=>"google"}, "expires"=>"1499445648"}}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = $1 LIMIT 1  [["uid", "google:101699967333588757947"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("uid", "first_name", "last_name", "gender", "avatar", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["uid", "google:101699967333588757947"], ["first_name", "Le"], ["last_name", "Tran"], ["gender", "female"], ["avatar", "https://lh4.googleusercontent.com/-iscJclBsTi4/AAAAAAAAAAI/AAAAAAAAPww/G7geCVsr_60/photo.jpg"], ["created_at", "2015-07-18 16:40:50.595714"], ["updated_at", "2015-07-18 16:40:50.595714"]]
+  [1m[36m (6.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+Completed 200 OK in 62ms (Views: 1.5ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/users/7" for ::1 at 2015-07-18 09:40:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.5ms)
