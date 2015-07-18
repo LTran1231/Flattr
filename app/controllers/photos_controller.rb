@@ -2,6 +2,7 @@ class PhotosController < ApplicationController
 
   def index
     photos = Photo.all
+
     if photos
       render json: photos
     else

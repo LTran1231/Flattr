@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :photos
+  has_many :votes
 
   validates :body_type, presence: true
   validates :dob, presence: true

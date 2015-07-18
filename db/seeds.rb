@@ -21,3 +21,9 @@ end
 200.times do
   Photo.create(user_id: rand(1..200))
 end
+
+
+750.times do 
+  Vote.create(user_id: rand(1..200), photo_id: rand(1..200), like: [true, false].sample) 
+end
+

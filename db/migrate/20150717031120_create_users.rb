@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.string :body_type
       t.string :gender
-      t.date :dob
+      t.date   :dob
       t.string :password
       t.string :email
 
