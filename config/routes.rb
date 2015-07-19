@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
   post 'facebook' => 'users#facebook'
   post 'google' => 'users#google'
+  post 'create' => 'photos#create'
 
   resources :users
   resources :photos
   resources :votes
+
+  resources :users do
+    resources :photos
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
