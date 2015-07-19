@@ -37,17 +37,22 @@ class PhotosController < ApplicationController
     twenty_one_forty = 0
     forty_one_sixty = 0
     sixty_eighty = 0 
+    thin = 0
+    medium = 0 
+    large = 0 
+
 
     votes.each do |vote|
       gender = User.find(vote.user_id).gender 
       age = User.find(vote.user_id).age
-      
+      body_type = User.find(vote.user_id).body_type
+      # gender search
       if gender == "male" 
         male += 1
       else 
         female += 1
       end
-      
+      # age search
       if age <= 20
         under_twenty += 1
       elsif age <= 40
@@ -56,6 +61,14 @@ class PhotosController < ApplicationController
         forty_one_sixty += 1
       else
         sixty_eighty +=1 
+      end
+      # bodytype search
+      if body_type == "thin"
+        thin += 1
+      elsif body_type == "medium"
+        medium += 1
+      else
+        large +=1
       end
 
 
@@ -66,6 +79,9 @@ class PhotosController < ApplicationController
     twenty_one_forty_vote = ((twenty_one_forty.to_f / vote_count.to_f) * 100).floor
     forty_one_sixty_vote = ((forty_one_sixty.to_f / vote_count.to_f) * 100).floor
     sixty_eighty_vote = ((sixty_eighty.to_f / vote_count.to_f) * 100).floor
+    thin_vote = ((thin.to_f / vote_count.to_f) * 100).floor
+    medium_vote= ((medium.to_f / vote_count.to_f) * 100).floor
+    large_vote = ((large.to_f / vote_count.to_f) * 100).floor
 
 
     if photo
@@ -80,8 +96,11 @@ class PhotosController < ApplicationController
         :under_twenty_vote => under_twenty,
         :twenty_one_forty_vote => twenty_one_forty,
         :forty_one_sixty_vote => forty_one_sixty,
-        :sixty_eighty_vote => sixty_eighty
-                  
+        :sixty_eighty_vote => sixty_eighty,
+        :thin_vote => thin,
+        :medium_vote => medium,
+        :large_vote =>  large,
+       
       }
 
     else
