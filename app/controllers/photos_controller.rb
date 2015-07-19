@@ -27,7 +27,7 @@ class PhotosController < ApplicationController
       rating_saying = "Flattering"
     elsif rating >= 50
       rating_saying = "Kind of Flattering"
-    else 
+    else
       rating_saying = "Not Doing You Justice"
     end
 
@@ -36,9 +36,9 @@ class PhotosController < ApplicationController
     under_twenty = 0
     twenty_one_forty = 0
     forty_one_sixty = 0
-    sixty_eighty = 0 
+    sixty_eighty = 0
     thin = 0
-    medium = 0 
+    medium = 0
     large = 0
     female_under_20 = 0
     male_under_20 = 0
@@ -50,13 +50,13 @@ class PhotosController < ApplicationController
     male_61_80 = 0
 
     votes.each do |vote|
-      gender = User.find(vote.user_id).gender 
+      gender = User.find(vote.user_id).gender
       age = User.find(vote.user_id).age
       body_type = User.find(vote.user_id).body_type
       # gender search
-      if gender == "male" 
+      if gender == "male"
         male += 1
-      else 
+      else
         female += 1
       end
       # age search
@@ -67,7 +67,7 @@ class PhotosController < ApplicationController
       elsif age <= 60
         forty_one_sixty += 1
       else
-        sixty_eighty +=1 
+        sixty_eighty +=1
       end
       # bodytype search
       if body_type == "thin"
@@ -100,7 +100,7 @@ class PhotosController < ApplicationController
 
 
     end
-    
+
     female_percentage = ((female.to_f / vote_count.to_f) * 100).floor
     male_percentage = ((male.to_f / vote_count.to_f) * 100).floor
     under_twenty_percentage = ((under_twenty.to_f / vote_count.to_f) * 100).floor
@@ -161,7 +161,7 @@ class PhotosController < ApplicationController
         :male_41_60_vote => male_41_60,
         :female_61_80_vote => female_61_80,
         :male_61_80_vote => male_61_80
-       
+
       }
 
     else
@@ -190,6 +190,7 @@ class PhotosController < ApplicationController
 
   def create
     photo = Photo.new(photo_params)
+    # photo = Photo.new(user_id: params[:user_id], vote_count: params[:vote_count], photo_url: params[:photo_url])
 
     if photo.save
       render json: photo
