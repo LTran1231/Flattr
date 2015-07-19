@@ -2,6 +2,7 @@ class PhotosController < ApplicationController
 
   def index
     photos = Photo.all
+
     if photos
       render json: photos
     else
@@ -11,8 +12,20 @@ class PhotosController < ApplicationController
 
   def show
     photo = Photo.find(params[:id])
+    vote = Vote.where(photo_id: params[:id])
+    vote_count = vote.count
+    like_votes = vote.where(:like => true).count
+    rating = (like_votes.to_f / vote_count.to_f) * 100
     if photo
-      render json: photo
+
+      render :json => {
+        :photo => photo,
+        :vote_count => vote_count,
+        :vote => vote,
+        :like_votes => like_votes,
+        :rating => rating
+      }
+
     else
       render json: { errors: photo.errors.full_messages }
     end
@@ -60,6 +73,6 @@ class PhotosController < ApplicationController
 
   private
     def photo_params
-      params.require(:photo).permit(:title, :text)
+      params.require(:photo).permit(:user_id, :vote_count, :photo_url)
     end
 end

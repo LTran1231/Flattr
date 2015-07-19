@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   has_many :photos
+  has_many :votes
   validates :uid, presence: true
+
 
   # validates :body_type, allow_blank: true
   # validates :age, allow_blank: true
@@ -23,7 +25,7 @@ class User < ActiveRecord::Base
     uid = "#{user[:uid]}"
     first_name = "#{user[provider][:cachedUserProfile][first_name]}"
     last_name = "#{user[provider][:cachedUserProfile][last_name]}"
-    gender = "#{user[provider][:cachedUserProfile][:gender]}" 
+    gender = "#{user[provider][:cachedUserProfile][:gender]}"
     existing_user = User.find_by(uid: uid)
     if existing_user
       # self.udpate!(
