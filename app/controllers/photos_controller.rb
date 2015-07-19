@@ -33,6 +33,11 @@ class PhotosController < ApplicationController
 
   def new
     photo = Photo.new
+    if photo
+      render json: photo
+    else
+      render json: photo
+    end
   end
 
   def edit
@@ -45,9 +50,9 @@ class PhotosController < ApplicationController
   end
 
   def create
-    photo = Photo.new(article_params)
+    photo = Photo.new(photo_params)
 
-    if photo
+    if photo.save
       render json: photo
     else
       render json: { errors: photo.errors.full_messages }
