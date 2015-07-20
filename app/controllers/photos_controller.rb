@@ -11,24 +11,25 @@ class PhotosController < ApplicationController
   end
 
   def show
-    photo = Photo.find(params[:id])
-    vote = Vote.where(photo_id: params[:id])
-    vote_count = vote.count
-    like_votes = vote.where(:like => true).count
-    rating = (like_votes.to_f / vote_count.to_f) * 100
-    if photo
+    {photo_url: "http://cdni.condenast.co.uk/426x639/s_v/Simpsons6_V_17May2010_aleXsandroPalombo_b.jpg"}.to_json
+    # photo = Photo.find(params[:id])
+    # vote = Vote.where(photo_id: params[:id])
+    # vote_count = vote.count
+    # like_votes = vote.where(:like => true).count
+    # rating = (like_votes.to_f / vote_count.to_f) * 100
+    # if photo
 
-      render :json => {
-        :photo => photo,
-        :vote_count => vote_count,
-        :vote => vote,
-        :like_votes => like_votes,
-        :rating => rating
-      }
+    #   render :json => {
+    #     :photo => photo,
+    #     :vote_count => vote_count,
+    #     :vote => vote,
+    #     :like_votes => like_votes,
+    #     :rating => rating
+    #   }
 
-    else
-      render json: { errors: photo.errors.full_messages }
-    end
+    # else
+    #   render json: { errors: photo.errors.full_messages }
+    # end
   end
 
   def new
