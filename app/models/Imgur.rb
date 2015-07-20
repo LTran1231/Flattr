@@ -4,6 +4,7 @@ module Imgur
   class Client
     include HTTParty
     base_uri 'https://api.imgur.com/3'
+    headers 'Authorization' => "#{ENV['IMGURKEY']}"
 
     def initialize(base64)
       @options = { query: {image: base64}}

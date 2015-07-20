@@ -197,13 +197,14 @@ class PhotosController < ApplicationController
 
     api = Imgur::Client.new(base64)
     response = api.upload_photo
+    puts response
     # take the response, get the url
     # assign the photo's url to photo(photo_url: )
     # results = {success: 'photo successfully created'}
     if photo.save
-      render json: response
+      # render json: response
       # render json: results[:success]
-      # render json: photo
+      render json: photo
     else
       # render json: response
       render json: { errors: photo.errors.full_messages }
