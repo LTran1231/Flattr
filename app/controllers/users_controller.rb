@@ -4,7 +4,8 @@ class UsersController < ApplicationController
     provider = "facebook"
     @user = User.create_from_provider(user, provider)
     session[:user_id] = @user.id
-    render json: current_user
+    photos = @user.photos
+    render json: { user: current_user, photos: photos }
   end
 
   def google
@@ -12,7 +13,8 @@ class UsersController < ApplicationController
     provider = "google"
     @user = User.create_from_provider(user, provider)
     session[:user_id] = @user.id
-    render json: current_user
+    photos = @user.photos
+    render json: { user: current_user, photos: photos }
   end
 
   def index

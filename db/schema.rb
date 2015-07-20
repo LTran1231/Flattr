@@ -19,12 +19,8 @@ ActiveRecord::Schema.define(version: 20150719191125) do
   create_table "photos", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "vote_count"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "photo_url"
   end
 
@@ -34,15 +30,13 @@ ActiveRecord::Schema.define(version: 20150719191125) do
     t.string   "last_name"
     t.string   "body_type"
     t.string   "gender"
-    t.date     "dob"
+    t.integer  "age"
     t.string   "password"
     t.string   "email"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.string   "uid"
+    t.string   "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "votes", force: :cascade do |t|
