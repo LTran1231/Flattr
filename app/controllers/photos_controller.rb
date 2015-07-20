@@ -1,4 +1,6 @@
 class PhotosController < ApplicationController
+  # require_relative '../models/imgur_api'
+  # include Imgur
 
   def index
     photos = Photo.all
@@ -191,6 +193,9 @@ class PhotosController < ApplicationController
   def create
     photo = Photo.new(photo_params)
     # photo = Photo.new(user_id: params[:user_id], vote_count: params[:vote_count], photo_url: params[:photo_url])
+    base64 = 'params[:photo][:photo_url]'
+    api = Imgur::Client.new
+    response = api.upload_photo(base64)
 
     if photo.save
       render json: photo
