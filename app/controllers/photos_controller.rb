@@ -197,8 +197,6 @@ class PhotosController < ApplicationController
     api = Imgur::Client.new
     response = api.upload_photo(base64)
 
-    byebug
-
     if photo.save
       render json: photo
     else
