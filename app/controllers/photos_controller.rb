@@ -194,14 +194,21 @@ class PhotosController < ApplicationController
     photo = Photo.new(photo_params)
     # photo = Photo.new(user_id: params[:user_id], vote_count: params[:vote_count], photo_url: params[:photo_url])
     base64 = 'params[:photo][:photo_url]'
-    api = Imgur::Client.new
-    response = api.upload_photo(base64)
+    api = Imgur::Client.new(base64)
+    response = api.upload_photo
 
+    # take the response, get the url
+    # assign the photo's url to photo(photo_url: )
+    # results = {success: 'photo successfully created'}
     if photo.save
-      render json: photo
+      render json: response
+      # render json: results[:success]
+      # render json: photo
     else
+      # render json: response
       render json: { errors: photo.errors.full_messages }
     end
+
   end
 
   def update
@@ -224,6 +231,7 @@ class PhotosController < ApplicationController
   private
     def photo_params
       params.require(:photo).permit(:user_id, :vote_count, :photo_url)
+      # params.require(:photo).permit(:user_id, :vote_count, :photo_url)
     end
   end
 

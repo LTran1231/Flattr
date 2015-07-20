@@ -3,16 +3,16 @@
 module Imgur
 
   class Client
-  include HTTParty
+    include HTTParty
+    base_uri 'https://api.imgur.com/3'
 
-    def initialize
-      # @auth = ENV['IMGURKEY']
+    def initialize(base64)
+      @options = { query: {image: base64}}
     end
+    # headers 'Authorization' => "client_id #{ENV['IMGURKEY']}"
 
-    headers 'Authorization' => "client_id #{ENV['IMGURKEY']}"
-
-    def upload_photo(base64)
-      response = self.class.post("https://api.imgur.com/3/image/#{base64}")
+    def upload_photo
+      response = self.class.post("/image", @options)
     end
 
   end
