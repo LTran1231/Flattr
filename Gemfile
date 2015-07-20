@@ -7,7 +7,7 @@ gem 'spring', :group => :development
 gem 'faker', '~> 1.4.3'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'pg'
-
+gem 'httparty', '~> 0.13.5'
 
 
 # To use ActiveModel has_secure_password
