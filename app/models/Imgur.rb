@@ -1,5 +1,4 @@
 
-
 module Imgur
 
   class Client
@@ -12,7 +11,7 @@ module Imgur
     # headers 'Authorization' => "client_id #{ENV['IMGURKEY']}"
 
     def upload_photo
-      response = self.class.post("/image", @options)
+      self.class.post("/image", @options)
     end
 
   end

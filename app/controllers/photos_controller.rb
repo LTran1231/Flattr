@@ -194,9 +194,9 @@ class PhotosController < ApplicationController
     photo = Photo.new(photo_params)
     # photo = Photo.new(user_id: params[:user_id], vote_count: params[:vote_count], photo_url: params[:photo_url])
     base64 = 'params[:photo][:photo_url]'
+
     api = Imgur::Client.new(base64)
     response = api.upload_photo
-
     # take the response, get the url
     # assign the photo's url to photo(photo_url: )
     # results = {success: 'photo successfully created'}
