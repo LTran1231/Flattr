@@ -3,6 +3,13 @@ class User < ActiveRecord::Base
   has_many :votes
   validates :uid, presence: true
 
+  def female?
+    gender == 'female'
+  end
+  
+  def male?
+    gender == 'male'
+  end
 
   # validates :body_type, allow_blank: true
   # validates :age, allow_blank: true
