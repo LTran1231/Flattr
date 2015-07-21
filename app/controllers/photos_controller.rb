@@ -12,7 +12,7 @@ class PhotosController < ApplicationController
     end
   end
 
-  def show
+  def show_data
     photo = Photo.find(params[:id])
     render :json => PhotoRatingCalculator.call(photo)
   end
