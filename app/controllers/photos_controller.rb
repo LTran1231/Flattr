@@ -3,12 +3,15 @@ class PhotosController < ApplicationController
   # include Imgur
 
   def index
-    photos = Photo.all
-
-    if photos
-      render json: photos
+    p "*" * 80
+    user = User.find(2)
+    photo = Photo.where.not(id: Vote.where(user_id: user.id).pluck(:photo_id)).limit(1)[0]
+    p photo
+    if photo
+      p "*" * 80
+      render json: {photo: photo.photo_url}
     else
-      render json: { errors: photos.errors.full_messages }
+      render json: { errors: photo.errors.full_messages }
     end
   end
 
@@ -16,6 +19,7 @@ class PhotosController < ApplicationController
     photo = Photo.find(params[:id])
     render :json => PhotoRatingCalculator.call(photo)
   end
+
 
   # def OLD_SHOW_FOR_REFERENCE
   #   votes = Vote.where(photo_id: params[:id])
