@@ -44,7 +44,6 @@ class PhotosController < ApplicationController
 
   def create
     photo = Photo.new(photo_params)
-    byebug
     # photo = Photo.new(user_id: params[:user_id], vote_count: params[:vote_count], photo_url: params[:photo_url])
     # base64 = 'params[:photo][:photo_url]'
 
