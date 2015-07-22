@@ -2,16 +2,21 @@ class PhotosController < ApplicationController
   # require_relative '../models/imgur_api'
   # include Imgur
 
-  def index
+  def user_photos
     user = User.find(params[:id])
     photo = Photo.where.not(id: Vote.where(user_id: user.id).pluck(:photo_id)).limit(1)[0]
 
     if photo
       render json: {photo: photo.photo_url}
-      render json: usr
+      # render json: usr
     else
       render json: { errors: photo.errors.full_messages }
     end
+  end
+
+  def index
+    photos = Photo.all
+    render json: photos
   end
 
   def show
