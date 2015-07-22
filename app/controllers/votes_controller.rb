@@ -1,8 +1,8 @@
 class VotesController < ApplicationController
 
   def create
-    p "*" * 80
-    p params[:photo]
+    # p "*" * 80
+    # p params[:photo]
     # @vote = Vote.new(user_id: params[:user], )
     # User = User.find_by(email: params[:user][:email])
 
