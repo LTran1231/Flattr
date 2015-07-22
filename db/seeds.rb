@@ -20,9 +20,17 @@
       avatar:"#"
       )
 end
-
+Photo.create( 
+    completed: false,
+    expired_date: DateTime.now
+    )
+    
+  
 200.times do
-  Photo.create(user_id: rand(1..200))
+  Photo.create( 
+    completed: [true, false].sample,
+    expired_date: Faker::Time.forward(4, :morning)
+    )
 end
 
 
