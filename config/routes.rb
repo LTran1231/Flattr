@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   post 'facebook' => 'users#facebook'
   post 'google' => 'users#google'
-  post 'create' => 'photos#create'
+
 
   resources :users
   resources :photos
