@@ -3,7 +3,7 @@ class PhotosController < ApplicationController
   # include Imgur
 
   def index
-    photo = Users.all
+    photo = User.all
       render json: photo
     else
       render json: { errors: photo.errors.full_messages }
