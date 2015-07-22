@@ -3,9 +3,13 @@ class PhotosController < ApplicationController
   # include Imgur
 
   def user_photos
+    p params
     user = User.find(params[:id])
-    photo = Photo.where.not(id: Vote.where(user_id: user.id).pluck(:photo_id)).limit(1)[0]
-
+    p '*' * 80
+    p user
+    photo = Photo.where.not(id: Vote.where(user_id: user.id).pluck(:photo_id)).where.not(user_id: user.id)[0]
+    p photo
+    p '*' * 80
     if photo
       render json: {photo: photo.photo_url}
       # render json: usr
