@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 gem 'rails-api'
 gem 'spring', :group => :development
-gem 'faker', '~> 1.4.3'
+# gem 'faker', '~> 1.4.3'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'pg'
 gem 'httparty', '~> 0.13.5'
