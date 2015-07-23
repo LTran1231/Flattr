@@ -99,141 +99,281 @@ class PhotoRatingCalculator
 
 
 	def female_vote
-		votes.select{|vote| vote.user.female? }.size
+		if votes.select{|vote| vote.user.female? }.size == nil
+			0
+		else
+			if votes.select{|vote| vote.user.female? }.size == nil
+				0
+			else
+				votes.select{|vote| vote.user.female? }.size
+			end
+		end
 	end
 
 	def male_vote
-		votes.select{|vote| vote.user.male?}.size
+		if votes.select{|vote| vote.user.male?}.size == nil
+			0
+		else
+			votes.select{|vote| vote.user.male?}.size
+		end
 	end
 
 	def under_twenty_vote
+		 if votes.select{|vote| vote.user.age == nil }.size
+		 	0
+		else
 		 votes.select{|vote| vote.user.age < 20  }.size
+		end
 	end
 
 	def twenty_one_forty_vote
-		votes.select{|vote| vote.user.age <= 40  }.size
+		if votes.select{|vote| vote.user.age == nil }.size
+			0
+		else
+			votes.select{|vote| vote.user.age <= 40  }.size
+		end
 	end
 
 	def forty_one_sixty_vote
-		votes.select{|vote| vote.user.age < 60  }.size
+		if votes.select{|vote| vote.user.age == nil }.size
+			0
+		else
+			votes.select{|vote| vote.user.age < 60  }.size
+		end
 	end
 
 	def sixty_eighty_vote
-		votes.select{|vote| vote.user.age < 80  }.size
+		if votes.select{|vote| vote.user.age == nil }.size
+			0
+		else
+			votes.select{|vote| vote.user.age < 80  }.size
+		end
 	end
 
 	def thin_vote
-		votes.select{|vote| vote.user.body_type == "thin"  }.size
+		if votes.select{|vote| vote.user.body_type == "thin"  }.size == nil
+			0
+		else
+			votes.select{|vote| vote.user.body_type == "thin"  }.size
+		end
 	end
 
 	def medium_vote
-		votes.select{|vote| vote.user.body_type == "medium"  }.size
+		if votes.select{|vote| vote.user.body_type == "medium"  }.size == nil
+			0
+		else
+			votes.select{|vote| vote.user.body_type == "medium"  }.size
+		end
 	end
 
 	def large_vote
-		votes.select{|vote| vote.user.body_type == "large"  }.size
+		if votes.select{|vote| vote.user.body_type == "large"  }.size == nil
+			0
+		else
+			votes.select{|vote| vote.user.body_type == "large"  }.size
+		end
 	end
 
 	def female_under_20_vote
-		votes.select{|vote| vote.user.female? && vote.user.age < 20}.size
+		if votes.select{|vote| vote.user.female? && vote.user.age == nil}.size
+			0
+		else
+			votes.select{|vote| vote.user.female? && vote.user.age < 20}.size
+		end
 
 	end
 
 	def male_under_20_vote
-		votes.select{|vote| vote.user.male? && vote.user.age < 20}.size
+		if votes.select{|vote| vote.user.male? && vote.user.age == nil}.size
+			0
+		else
+			votes.select{|vote| vote.user.male? && vote.user.age < 20}.size
+		end
 	end
 
 	def female_21_40_vote
-		votes.select{|vote| vote.user.female? && vote.user.age <= 40}.size
+		if votes.select{|vote| vote.user.female? && vote.user.age == nil}.size
+			0
+		else
+			votes.select{|vote| vote.user.female? && vote.user.age <= 40}.size
+		end
 	end
 
 	def male_21_40_vote
-		votes.select{|vote| vote.user.male? && vote.user.age <= 40}.size
+		if votes.select{|vote| vote.user.male? && vote.user.age == nil}.size
+			0
+		else
+			votes.select{|vote| vote.user.male? && vote.user.age <= 40}.size
+		end
 	end
 
 	def female_41_60_vote
-		votes.select{|vote| vote.user.female? && vote.user.age <= 60}.size
+		if votes.select{|vote| vote.user.female? && vote.user.age == nil}.size
+			0
+		else
+			votes.select{|vote| vote.user.female? && vote.user.age <= 60}.size
+		end
 	end
 
 	def male_41_60_vote
-		votes.select{|vote| vote.user.male? && vote.user.age <= 60}.size
+		if votes.select{|vote| vote.user.male? && vote.user.age == nil }.size
+			0
+		else
+			votes.select{|vote| vote.user.male? && vote.user.age <= 60}.size
+		end
 	end
 
 	def female_61_80_vote
-			votes.select{|vote| vote.user.female? && vote.user.age <= 80}.size
+			if votes.select{|vote| vote.user.female? && vote.user.age == nil }.size
+				0
+			else
+				votes.select{|vote| vote.user.female? && vote.user.age <= 80}.size
+			end
 	end
 
 	def male_61_80_vote
-			votes.select{|vote| vote.user.male? && vote.user.age <= 80}.size
+			if votes.select{|vote| vote.user.male? && vote.user.age == nil}.size
+				0
+			else
+				votes.select{|vote| vote.user.male? && vote.user.age <= 80}.size
+			end
 	end
 
 
 	def female_percentage
-		((female_vote.to_f / vote_count.to_f) * 100).floor
+		if ((female_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((female_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def male_percentage
-		((male_vote.to_f / vote_count.to_f) * 100).floor
+		if ((male_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((male_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def under_twenty_percentage
-		((under_twenty_vote.to_f / vote_count.to_f) * 100).floor
+		if ((under_twenty_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((under_twenty_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def twenty_one_forty_percentage
-		((twenty_one_forty_vote.to_f / vote_count.to_f) * 100).floor
+		if ((twenty_one_forty_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((twenty_one_forty_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def forty_one_sixty_percentage
-		((forty_one_sixty_vote.to_f / vote_count.to_f) * 100).floor
+		if ((forty_one_sixty_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((forty_one_sixty_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def sixty_eighty_percentage
-		((sixty_eighty_vote.to_f / vote_count.to_f) * 100).floor
+		if ((sixty_eighty_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((sixty_eighty_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def thin_percentage
-		((thin_vote.to_f / vote_count.to_f) * 100).floor
+		if ((thin_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((thin_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def medium_percentage
-		((medium_vote.to_f / vote_count.to_f) * 100).floor
+		if ((medium_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((medium_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def large_percentage
-		((large_vote.to_f / vote_count.to_f) * 100).floor
+		if ((large_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((large_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def female_under_20_percentage
-		((female_under_20_vote.to_f / vote_count.to_f) * 100).floor
+		if ((female_under_20_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((female_under_20_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def male_under_20_percentage
-		((male_under_20_vote.to_f / vote_count.to_f) * 100).floor
+		if ((male_under_20_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((male_under_20_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def female_21_40_percentage
-		((female_21_40_vote.to_f / vote_count.to_f) * 100).floor
+		if ((female_21_40_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((female_21_40_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def male_21_40_percentage
-		((male_21_40_vote.to_f / vote_count.to_f) * 100).floor
+		if ((male_21_40_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((male_21_40_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def female_41_60_percentage
-		((female_41_60_vote.to_f / vote_count.to_f) * 100).floor
+		if ((female_41_60_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((female_41_60_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def male_41_60_percentage
-		((male_41_60_vote.to_f / vote_count.to_f) * 100).floor
+		if ((male_41_60_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((male_41_60_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def female_61_80_percentage
-		((female_61_80_vote.to_f / vote_count.to_f) * 100).floor
+		if ((female_61_80_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((female_61_80_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 	def male_61_80_percentage
-		((male_61_80_vote.to_f / vote_count.to_f) * 100).floor
+		if ((male_61_80_vote.to_f / vote_count.to_f) * 100).floor == nil
+			0
+		else
+			((male_61_80_vote.to_f / vote_count.to_f) * 100).floor
+		end
 	end
 
 end
