@@ -1,1 +1,0 @@
-Google doc for telling the team what you are working on. Helps prevent people from working on the same thing at once which could create time-wasting merge conflicts https://docs.google.com/spreadsheets/d/11ExdpA7WiO5K8MxsXbGWKxFxJ2bTdIP2B0RguWr-Bwk/edit#gid=0
