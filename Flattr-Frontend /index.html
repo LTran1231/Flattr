@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="A Crowd Sourcing Fashion Application To Help You Look Your Best">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+
+  <!-- BOOTSTRAP -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+  <!-- STYLE SHEET -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/ellis.css" />
+  <!-- JQUERY MOBILE -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link href="css/bootstrap-social.css" rel="stylesheet" >
+  <!-- PACIFICO LOGO FONT -->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+  <!-- NATIVE DROID CSS DESIGN -->
+  <link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.css" />
+  <link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.light.css" id='jQMnDTheme' />
+  <link rel="stylesheet" href="http://nativedroid.godesign.ch/demo/css/jquerymobile.nativedroid.color.purple.css" id='jQMnDColor' />
+
+  <!-- JQUERY MOBILE -->
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <script src="js/vendor/handlebars-v3.0.3.js"></script>
+  <script src="js/firebase.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+  <script charset="utf-8" src="js/main.js"></script>
+  <script type="text/javascript">
+  app.initialize();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.js"></script>
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <title>Hello Camera</title>
+
+
+</head>
+<body>
+
+ <div id="main-login-page" data-role="page" data-theme="c">
+  <div id="insta">
+    <div role="main" class="container center-block">
+      <div class="row">
+        <h1 class="text-center" style="font-family: Pacifico !important;">Flattr</h1>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <br>
+    <div class="login-top col-xs-10 col-xs-offset-1" id="dialog-login">
+      <a class="btn btn-social btn-block btn-facebook" data-provider="facebook"><i class="fa fa-facebook-official"></i>Signin in with Facebook</a>
+      <hr/>
+      <a class="btn btn-social btn-block btn-google" data-provider="google"><i class="fa fa-google-plus"></i>Signin in with Google+</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- HOME FEED PAGE -->
+<div id="homefeed" data-role="page" data-theme="b">
+ <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+  <div class="row">
+    <div class="col-xs-6 text-left">
+      <h1 style="font-family: Pacifico !important; font-size: 2em !important;">Flattr</h1>
+    </div>
+    <div class="col-xs-6 text-right">
+      <button class="logout btn-btn-default pull-right">
+        Logout
+      </button>
+    </div>
+  </div>
+</div>
+<div id="container" class="landing_page" data-role="main">
+  <!-- container for pages -->
+</div>
+<script id="photo_feed_template" type="text/x-handlebars-template">
+<div data-role="content" id="imageslider">
+<div>
+<img id="swiper_image" src={{photo}} alt="photo1" />
+</div>
+</div>
+</script>
+<div style="width: 100% !important; display: flex !important;">
+  <div style="width: 50% !important;">
+    <input type="button" id="dislike" value="Unflattering">
+  </div>
+  <div style="width: 50% !important;">
+    <input type="button" id="like" value="Flattering">
+  </div>
+</div>
+<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-theme="b" role="contentinfo" class="ui-footer ui-bar-b ui-footer-fixed slideup">
+  <div data-role="navbar" class="ui-navbar" role="navigation">
+    <ul class="ui-grid-b">
+      <li class="ui-block-a"><a href="#homefeed" class="ui-homefeed-link link ui-btn"><i class="fa fa-home fa-2x"></i></a></li>
+      <li class="ui-block-b"><a href="#upload" class="ui-link ui-btn"><i class="fa fa-camera-retro fa-2x"></i></a></li>
+      <li class="ui-block-c"><a href="#profile" class="ui-link ui-btn"><i class="fa fa-user fa-2x"></i></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- CAMERA PAGE -->
+<div id="upload" data-role="page" data-theme="b">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+   <div class="row">
+     <div class="col-xs-6 text-left">
+       <h1 style="font-family: Pacifico !important; font-size: 2em !important;">Flattr</h1>
+     </div>
+     <div class="col-xs-6 text-right">
+       <button class="logout btn-btn-default pull-right">
+         Logout
+       </button>
+     </div>
+   </div>
+ </div>
+ <div data-role="content">
+  <div class="app">
+    <center>
+
+      <img class="displayMyImage" src="img/frame2.png" alt="uploaded-photo" height="" width="">
+
+      <form action="" method="POST">
+
+        <input class="myUserId" type="hidden" name="user_id" value=""/>
+        <input class="myImageData" type="hidden" name="photo_url" value=""/>
+
+        <div class="ellis">
+          <h1><button class="take-photo-btn" type="button">Take Photo</button></h1>
+          <h1><button class="upload-photo-btn" type="button">Share</button></h1>
+        </div>
+
+      </form>
+    </center>
+  </div>
+
+  <ul class="displayResponse"></ul>
+
+</div>
+<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-theme="b" role="contentinfo" class="ui-footer ui-bar-b ui-footer-fixed slideup">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#homefeed"><i class="homefeed-link fa fa-home fa-2x"></i></a></li>
+      <li><a href="#upload"><i class="fa fa-camera-retro fa-2x"></i></a></li>
+      <li><a href="#profile"><i class="fa fa-user fa-2x"></i></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- PROFILE PAGE- -->
+<div id="profile" data-role="page" data-theme="b">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+    <div class="row">
+      <div class="col-xs-6 text-left">
+        <h1 style="font-family: Pacifico !important; font-size: 2em !important;">Flattr</h1>
+      </div>
+      <div class="col-xs-6 text-right">
+        <button class="logout btn-btn-default pull-right">
+          Logout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="content" class="debug">
+
+    <!--- vivek - -->
+<div class="container">
+  <div id="ig-section" class="row">
+    <div class="col-xs-6">
+      <img class="img-rounded user_avatar">
+    </div>
+    <div class="col-xs-6">
+      <div class="row">
+        <div class="col-xs-12">
+          <h3 class="user_name"></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h4 class="user_gender"></h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h4 class="user_age"></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="user_photos container debug">
+    <div class="photos-area">
+    </div>
+    <script type='text/x-handlebars-template' class='photos-template'>
+    {{#each photos}}
+    </li><a data-rel="popup" data-position-to="window" data-transition="pop" data-inline="true" href="#{{id}}">
+    <img height="64" width="64" src={{photo_url}} />
+    </a></li>
+    {{/each}}
+    </script>
+
+    <!-- POPUP DETAIL RESULT -->
+    <div id="7" data-role="popup" data-theme="b" style="width: 300px; height:300px" data-mismissible="false">
+     <div data-role="content">
+      <h2 class="rating_saying">Result:  </h2>
+      <div class="moredata">
+        <div class="col-xs-18 col-sm-6 col-md-3">
+          <div id="resultschart">
+            <img src="img/result.png" style="width: 100%">
+            <!-- <canvas id="chart" width="500" height="400"></canvas> -->
+          </div>
+          <p><a href="#data-analytic" data-transition="slide" class="btn btn-default btn-xs" role="button">Back</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END OF POPUP -->
+</div>
+</div>
+
+<div data-position="fixed" data-tap-toggle="false" data-role="footer" data-theme="b" role="contentinfo" class="ui-footer ui-bar-b ui-footer-fixed slideup">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#homefeed"><i class="homefeed-link fa fa-home fa-2x"></i></a></li>
+      <li><a href="#upload"><i class="fa fa-camera-retro fa-2x"></i></a></li>
+      <li><a href="#profile"><i class="fa fa-user fa-2x"></i></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
